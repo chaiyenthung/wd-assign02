@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="EatEat, restaurant discovery, reservation">
+    <meta name="author" content="Chai Yen Thung">
+    <title>EatEat - Estimated Bill Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+     <script src="js/script.js"></script>
+</head>
+<body>
+    
+    <!-- Header & Navigation Menu -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-area">
+                <img src="images/logo.png" alt="EatEat Logo">
+                <span>EatEat</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="restaurants.html">Restaurants</a></li>
+                    <li><a href="recommend.html">Recommendations</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="bill.html" class="active" aria-current="page">Bill Calculator</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="calculator-card">
+            <h1>Estimated Bill Calculator</h1>
+            <p>Plan your dining budget by choosing a restaurant, the number of diners, and any optional drinks. 
+                The breakdown of your calculation is displayed below.
+            </p>
+            
+            
+            <form id="billCalculatorForm">
+                <div class="input-group">
+                    <label for="calcRestaurant">Select Restaurant</label>
+                    <select id="calcRestaurant" name="calcRestaurant">
+                        <option value="120">Alva KL Sky Dining & Grill (approx. RM120/person)</option>
+                        <option value="35">Kooky Plate (approx. RM35/person)</option>
+                        <option value="75">The Siam Ampang (approx. RM75/person)</option>
+                        <option value="35">Limone (approx. RM35/person)</option>
+                        <option value="45">The Hungry Tapir (approx. RM45/person)</option>
+                        <option value="50">BETAWI Indonesian Cuisine (approx. RM50/person)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="calcPeople">Total Number of Diners</label>
+                    <input type="number" id="calcPeople" name="calcPeople" min="1" max="100" step="1" value="2">
+                    <span class="error-msg" id="calcPeopleError" aria-live="polite"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="beveragePackage">Optional Drinks Package (per person)</label>
+                    <select id="beveragePackage" name="beveragePackage">
+                        <option value="0">No drinks package (RM0)</option>
+                        <option value="10">Basic drink (+RM10 / person)</option>
+                        <option value="20">Specialty drink (+RM20 / person)</option>
+                    </select>
+                </div>
+
+                <div class="input-group" id="drinkCountGroup">
+                    <label for="calcDrinkPeople">How many diners are ordering drinks?</label>
+                    <input type="number" id="calcDrinkPeople" name="calcDrinkPeople" min="0" max="100" step="1" value="2">
+                    <span class="error-msg" id="calcDrinkPeopleError" aria-live="polite"></span>
+                </div>
+            </form>
+
+            <div class="calc-result-box" aria-live="polite">
+                <h2>Estimated Bill Summary</h2>
+                <div id="billBreakdown" style="margin: 15px 0; text-align: left; display: inline-block; font-size: 0.95rem;">
+                    <p>• Food Cost (<span id="summaryPeopleCount">2</span> diners): RM <span id="foodSubtotal">0.00</span></p>
+                    <p>• Drinks Cost (<span id="summaryDrinkCount">2</span> diners): RM <span id="drinkSubtotal">0.00</span></p>
+                    <p>• Subtotal: RM <span id="combinedSubtotal">0.00</span></p>
+                    <p>• Service Charge (10%): RM <span id="serviceFee">0.00</span></p>
+                    <p>• Government SST (6%): RM <span id="sstFee">0.00</span></p>
+                </div>
+                <hr style="border: 0; border-top: 1px solid rgba(0,0,0,0.1); margin: 10px 0;">
+                <p><strong>Estimated Total Cost</strong></p>
+                <p class="total-price">RM <span id="estimatedTotal">0.00</span></p>
+                <p class="bill-note" style="margin-top: 10px; font-size: 0.85rem;">Prices are estimates inclusive of an illustrative 10% service charge and 6% Malaysian SST.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About EatEat</h3>
+                <p>Helping you discover great restaurants and enjoy a simpler dining experience.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:105025228@student.swin.edu.au">105025228@student.swin.edu.au</a></p>
+                <p>Phone: <a href="tel:+60102631109">+6010 2631109</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EatEat Platform. All rights reserved. Developed for COS10005 Web Development.</p>
+        </div>
+    </footer>
+</body>
+</html>

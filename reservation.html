@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="EatEat, restaurant discovery, reservation">
+    <meta name="author" content="Chai Yen Thung">
+    <title>EatEat - Reservation | Book a Table</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+
+    <!-- Header & Navigation Menu -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-area">
+                <img src="images/logo.png" alt="EatEat Logo">
+                <span>EatEat</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="restaurants.html">Restaurants</a></li>
+                    <li><a href="recommend.html">Recommendations</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="reservation.html" class="active" aria-current="page">Reservation</a></li>
+                    <li><a href="bill.html">Bill Calculator</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="form-box">
+            <h1>Table Reservation</h1>
+            <h2>Secure Your Dining Experience</h2>
+            <p>Choose your restaurant, preferred date and time, and deposit method to request a table.</p>
+
+            <!--Reservation Form-->
+            <form id="reservationForm" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="POST" novalidate>
+                <div class="input-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" autocomplete="name">
+                    <span id="fullNameError" class="error-msg" aria-live="polite"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="resEmail">Email Address</label>
+                    <input type="email" id="resEmail" name="resEmail" autocomplete="email">
+                    <span id="resEmailError" class="error-msg" aria-live="polite"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="resPhone">Phone Number (at least 10 digits)</label>
+                    <input type="tel" id="resPhone" name="resPhone" inputmode="numeric" autocomplete="tel">
+                    <span id="resPhoneError" class="error-msg" aria-live="polite"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="restaurantSelect">Restaurant</label>
+                    <select id="restaurantSelect" name="restaurantSelect">
+                        <option value="">-- Select Restaurant --</option>
+                        <option value="Alva KL Sky Dining & Grill" data-deposit="30">Alva KL Sky Dining & Grill (RM30 deposit)</option>
+                        <option value="Kooky Plate" data-deposit="10">Kooky Plate (RM10 deposit)</option>
+                        <option value="The Siam Ampang" data-deposit="10">The Siam Ampang (RM10 deposit)</option>
+                        <option value="Limone" data-deposit="10">Limone (RM10 deposit)</option>
+                        <option value="The Hungry Tapir" data-deposit="10">The Hungry Tapir (RM10 deposit)</option>
+                        <option value="BETAWI Indonesian Cuisine" data-deposit="10">BETAWI Indonesian Cuisine (RM10 deposit)</option>
+                    </select>
+                    <span id="restaurantError" class="error-msg" aria-live="polite"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="resDateTime">Reservation Date and Time</label>
+                    <input type="datetime-local" id="resDateTime" name="resDateTime">
+                    <span id="resDateTimeError" class="error-msg" aria-live="polite"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="numPeople">Number of People</label>
+                    <input type="number" id="numPeople" name="numPeople" min="1" step="1" value="2">
+                    <span id="numPeopleError" class="error-msg" aria-live="polite"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="specialRequests">Special Requests (Optional)</label>
+                    <textarea id="specialRequests" name="specialRequests" placeholder="e.g. A high chair or food allergy details"></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="depositAmount">Reservation Deposit (RM)</label>
+                    <input type="text" id="depositAmount" name="depositAmount" value="0.00" readonly>
+                </div>
+
+                <fieldset class="input-group form-fieldset">
+                    <legend>Deposit Method</legend>
+                    <div class="radio-group">
+                        <label><input type="radio" name="paymentMethod" value="Voucher"> Voucher</label>
+                        <label><input type="radio" name="paymentMethod" value="Online"> Online Payment</label>
+                    </div>
+                    <span id="paymentMethodError" class="error-msg" aria-live="polite"></span>
+                </fieldset>
+
+                <div class="input-group" id="voucherSection" hidden>
+                    <label for="voucherCode">Voucher Code (12 digits)</label>
+                    <input type="text" id="voucherCode" name="voucherCode" maxlength="12" inputmode="numeric" placeholder="Enter demo voucher code" disabled>
+                    <span id="voucherError" class="error-msg" aria-live="polite"></span>
+                </div>
+
+                <div class="input-group" id="creditCardSection" hidden>
+                    <label for="cardType">Card Type</label>
+                    <select id="cardType" name="cardType" disabled>
+                        <option value="">-- Select Card Type --</option>
+                        <option value="Visa">Visa</option>
+                        <option value="Mastercard">Mastercard</option>
+                        <option value="Amex">American Express</option> 
+                    </select>
+                    <label for="creditCard">Card Number (digits only)</label>
+                    <input type="text" id="creditCard" name="creditCard" inputmode="numeric" autocomplete="off" placeholder=" Card number" disabled>
+                    <span id="creditCardError" class="error-msg" aria-live="polite"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="billingEmail">Billing Email Address</label>
+                    <input type="email" id="billingEmail" name="billingEmail" autocomplete="email">
+                    <div class="checkbox-group same-email-option">
+                        <label><input type="checkbox" id="sameEmailCheck"> Same as email address</label>
+                    </div>
+                    <span id="billingEmailError" class="error-msg" aria-live="polite"></span>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Reservation</button>
+            </form>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About EatEat</h3>
+                <p>Helping you discover great restaurants and enjoy a simpler dining experience.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:105025228@student.swin.edu.au">105025228@student.swin.edu.au</a></p>
+                <p>Phone: <a href="tel:+60102631109">+6010 2631109</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EatEat Platform. All rights reserved. Developed for COS10005 Web Development.</p>
+        </div>
+    </footer>
+</body>
+</html>

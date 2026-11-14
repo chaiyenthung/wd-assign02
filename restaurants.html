@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="EatEat, restaurant discovery, reservations, Kuala Lumpur">
+    <meta name="author" content="Chai Yen Thung">
+    <title>EatEat - Restaurants | Discover Places</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+
+    <!-- Header & Navigation Menu -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-area">
+                <img src="images/logo.png" alt="EatEat Logo">
+                <span>EatEat</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="restaurants.html" class="active" aria-current="page">Restaurants</a></li>
+                    <li><a href="recommend.html">Recommendations</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="bill.html">Bill Calculator</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="restaurant-listing-section">
+            <h1>Explore Restaurants</h1>
+            <p class="restaurant-intro">Find your next favourite dining spot. Browse restaurants, explore popular dishes, and book a table that suits your plans.</p>
+
+            <div class="restaurant-grid">
+                <!-- Restaurant 1 -->
+                <article class="restaurant-card">
+                    <div class="restaurant-slideshow" role="region" aria-label="Photos of Alva KL Sky Dining &amp; Grill" tabindex="0">
+                        <div class="slide-images">
+                            <img class="slide-image is-active" src="images/restaurant1.jpg" alt="Alva KL Sky Dining &amp; Grill restaurant" loading="lazy">
+                            <img class="slide-image" src="images/restaurant1.1.jpg" alt="Food and dishes at Alva KL Sky Dining &amp; Grill" loading="lazy" hidden>
+                            <img class="slide-image" src="images/restaurant1.2.jpg" alt="Dining highlights at Alva KL Sky Dining &amp; Grill" loading="lazy" hidden>
+                        </div>
+                        <button class="slide-arrow slide-prev" type="button" aria-label="Previous photo of Alva KL Sky Dining &amp; Grill">&#10094;</button>
+                        <button class="slide-arrow slide-next" type="button" aria-label="Next photo of Alva KL Sky Dining &amp; Grill">&#10095;</button>
+                        <span class="slide-counter" aria-live="polite">1 / 3</span>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="restaurant-title">Alva KL Sky Dining &amp; Grill</h2>
+                        <span class="badge">Modern Fusion / Sky Dining</span>
+                        <div class="restaurant-meta">
+                            <p><strong>Estimated price per person:</strong><br> RM 80–160</p>
+                            <p><strong>Reservation deposit:</strong> RM 30</p>
+                        </div>
+                        <h3 class="signature-heading">Signature Dishes</h3>
+                        <ul class="signature-dishes">
+                            <li><span>Seared U.S. Scallops</span><strong>RM 58</strong></li>
+                            <li><span>Australian Lamb Short Ribs</span><strong>RM 88</strong></li>
+                        </ul>
+                        <p class="restaurant-description">Located on the 99th floor of Ascott Star KLCC, Alva KL combines modern fusion cuisine with stunning views of Kuala Lumpur. Guests can enjoy grilled seafood, meats, and pasta while admiring the city skyline, including the Petronas Twin Towers. With indoor seating and an outdoor bar, it is a lovely choice for date nights, celebrations, and special occasions. The menu brings together creative flavours and carefully presented dishes for a memorable dining experience.</p>
+                    </div>
+                    <a href="reservation.html?restaurant=Alva%20KL%20Sky%20Dining%20%26%20Grill&amp;deposit=30" class="book-btn">Book a Table</a>
+                </article>
+
+               <!-- Restaurant 2 -->
+                <article class="restaurant-card">
+                    <div class="restaurant-slideshow" role="region" aria-label="Photos of Kooky Plate" tabindex="0">
+                        <div class="slide-images">
+                            <img class="slide-image is-active" src="images/restaurant2.jpg" alt="Kooky Plate restaurant" loading="lazy">
+                            <img class="slide-image" src="images/restaurant2.1.jpg" alt="Food and dishes at Kooky Plate" loading="lazy" hidden>
+                            <img class="slide-image" src="images/restaurant2.2.jpg" alt="Dining highlights at Kooky Plate" loading="lazy" hidden>
+                        </div>
+                        <button class="slide-arrow slide-prev" type="button" aria-label="Previous photo of Kooky Plate">&#10094;</button>
+                        <button class="slide-arrow slide-next" type="button" aria-label="Next photo of Kooky Plate">&#10095;</button>
+                        <span class="slide-counter" aria-live="polite">1 / 3</span>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="restaurant-title">Kooky Plate</h2>
+                        <span class="badge">Café / Desserts &amp; Casual Dining</span>
+                        <div class="restaurant-meta">
+                            <p><strong>Estimated price per person:</strong><br> RM 20–50</p>
+                            <p><strong>Reservation deposit:</strong> RM 10</p>
+                        </div>
+                        <h3 class="signature-heading">Signature Dishes</h3>
+                        <ul class="signature-dishes">
+                            <li><span>Tiramisu</span><strong>RM 17.00</strong></li>
+                            <li><span>Tiger Prawn Aglio Olio</span><strong>RM 38.00</strong></li>
+                        </ul>
+                        <p class="restaurant-description">Located in Chow Kit, Kooky Plate brings the sweet treats of its sister café, Kooky Cream, together with a broader selection of savoury dishes. The café is known for colourful plates, cakes, and drinks, making it an inviting place for a casual gathering. Dessert lovers can try the silky Tau Foo Fah Cheesecake or Tiramisu, while guests looking for a fuller meal can choose from options such as Beef Ramen and Kimchi Chicken Quiche.</p>
+                    </div>
+                    <a href="reservation.html?restaurant=Kooky%20Plate&amp;deposit=10" class="book-btn">Book a Table</a>
+                </article>
+
+                <!-- Restaurant 3 -->
+                <article class="restaurant-card">
+                    <div class="restaurant-slideshow" role="region" aria-label="Photos of The Siam Ampang" tabindex="0">
+                        <div class="slide-images">
+                            <img class="slide-image is-active" src="images/restaurant3.jpg" alt="The Siam Ampang restaurant " loading="lazy">
+                            <img class="slide-image" src="images/restaurant3.1.jpg" alt="Hanglay Mutton Curry" loading="lazy" hidden>
+                            <img class="slide-image" src="images/restaurant3.2.jpg" alt="Thai Crab Omelette" loading="lazy" hidden>
+                        </div>
+                        <button class="slide-arrow slide-prev" type="button" aria-label="Previous photo of The Siam Ampang">&#10094;</button>
+                        <button class="slide-arrow slide-next" type="button" aria-label="Next photo of The Siam Ampang">&#10095;</button>
+                        <span class="slide-counter" aria-live="polite">1 / 3</span>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="restaurant-title">The Siam Ampang</h2>
+                        <span class="badge">Thai / Traditional Cuisine</span>
+                        <div class="restaurant-meta">
+                            <p><strong>Estimated price per person:</strong><br> RM 50-100</p>
+                            <p><strong>Reservation deposit:</strong> RM 10</p>
+                        </div>
+                        <h3 class="signature-heading">Signature Dishes</h3>
+                        <ul class="signature-dishes">
+                            <li><span>Hanglay Mutton Curry</span><strong>RM 68.00</strong></li>
+                            <li><span>Crab Omelette</span><strong>RM 59.00</strong></li>
+                        </ul>
+                        <p class="restaurant-description">
+                            Located in Ampang, The Siam offers a taste of traditional
+                            Thai cuisine with rich flavours and aromatic spices.
+                            One of its signature dishes is the Hanglay Mutton Curry,
+                            a Northern Thai favourite featuring tender mutton in a
+                            thick, flavourful gravy made with ginger and tamarind.
+                            Another popular choice is the Crab Omelette, served with
+                            crispy edges, a fluffy centre, and generous crab meat.
+                            With its comforting Thai dishes and welcoming dining
+                            experience, The Siam is a great choice for families,
+                            friends, and Thai food lovers.                        
+                        </p>
+                    </div>
+                    <a href="reservation.html?restaurant=The%20Siam%20Ampang&deposit=15" class="book-btn">Book Table</a>
+                </article>
+
+                <!-- Restaurant 4 -->
+                <article class="restaurant-card">
+                    <div class="restaurant-slideshow" role="region" aria-label="Photos of Limone" tabindex="0">
+                        <div class="slide-images">
+                            <img class="slide-image is-active" src="images/restaurant4.jpg" alt="Limone restaurant" loading="lazy">
+                            <img class="slide-image" src="images/restaurant4.1.jpg" alt="Food and dishes at Limone" loading="lazy" hidden>
+                            <img class="slide-image" src="images/restaurant4.2.jpg" alt="Dining highlights at Limone" loading="lazy" hidden>
+                        </div>
+                        <button class="slide-arrow slide-prev" type="button" aria-label="Previous photo of Limone">&#10094;</button>
+                        <button class="slide-arrow slide-next" type="button" aria-label="Next photo of Limone">&#10095;</button>
+                        <span class="slide-counter" aria-live="polite">1 / 3</span>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="restaurant-title">Limone</h2>
+                        <span class="badge">European-inspired / Café</span>
+                        <div class="restaurant-meta">
+                            <p><strong>Estimated price per person:</strong><br> RM 20–50</p>
+                            <p><strong>Reservation deposit:</strong> RM 10</p>
+                        </div>
+                        <h3 class="signature-heading">Signature Dishes</h3>
+                        <ul class="signature-dishes">
+                            <li><span>The Kebaya</span><strong>RM 21.00</strong></li>
+                            <li><span>Salmon Tacos with Mango Salsa</span><strong>RM 32.00</strong></li>
+                        </ul>
+                        <p class="restaurant-description">Inspired by an Italian garden, Limone is a cheerful European-style café in Plaza Zurich, Bukit Damansara. Its yellow and green décor, lush plants, and central lemon tree make it a lovely place for photos and leisurely meals. Guests can enjoy pastries, delicate desserts, and aromatic coffee, or choose from brunch favourites and warm dishes. Highlights include the Tokyo Garden yuzu tart, Smoked Salmon Eggs Benedict, and spicy Aglio Olio Pasta.</p>
+                    </div>
+                    <a href="reservation.html?restaurant=Limone&amp;deposit=10" class="book-btn">Book a Table</a>
+                </article>
+
+                <!-- Restaurant 5 -->
+                <article class="restaurant-card">
+                    <div class="restaurant-slideshow" role="region" aria-label="Photos of The Hungry Tapir" tabindex="0">
+                        <div class="slide-images">
+                            <img class="slide-image is-active" src="images/restaurant5.jpg" alt="The Hungry Tapir" loading="lazy">
+                            <img class="slide-image" src="images/restaurant5.1.jpg" alt="Pink Bombshell Burger" loading="lazy" hidden>
+                            <img class="slide-image" src="images/restaurant5.2.jpg" alt="Plant Power Big Brekkie" loading="lazy" hidden>
+                        </div>
+                        <button class="slide-arrow slide-prev" type="button" aria-label="Previous photo of The Hungry Tapir">&#10094;</button>
+                        <button class="slide-arrow slide-next" type="button" aria-label="Next photo of The Hungry Tapir">&#10095;</button>
+                        <span class="slide-counter" aria-live="polite">1 / 3</span>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="restaurant-title">The Hungry Tapir</h2>
+                        <span class="badge">Vegan / Plant-Based Fusion</span>
+                        <div class="restaurant-meta">
+                            <p><strong>Estimated price per person:</strong><br> RM 30-60</p>
+                            <p><strong>Reservation deposit:</strong> RM 10</p>
+                        </div>
+                        <h3 class="signature-heading">Signature Dishes</h3>
+                        <ul class="signature-dishes">
+                            <li><span>Pink Bombshell Burger</span><strong>RM 34.00</strong></li>
+                            <li><span>Plant Power Big Brekkie</span><strong>RM 28.00</strong></li>
+                        </ul>
+                        <p class="restaurant-description">
+                            The Hungry Tapir is a fully vegan restaurant offering
+                            creative plant-based dishes inspired by local and
+                            international flavours. Set in a restored shoplot, the
+                            restaurant features a cozy and colourful atmosphere,
+                            making it a great place for casual dining, dates,
+                            and gatherings with friends. Popular dishes include
+                            the Pink Bombshell Burger and Mama's Satay, which
+                            offer delicious alternatives to traditional meat-based
+                            meals. Whether you are vegan or simply interested
+                            in trying something different, The Hungry Tapir
+                            offers a unique dining experience.                        
+                        </p>
+                    </div>
+                    <a href="reservation.html?restaurant=The%20Hungry%20Tapir&deposit=10" class="book-btn">Book Table</a>
+                </article>
+
+                <!-- Restaurant 6 -->
+                <article class="restaurant-card">
+                    <div class="restaurant-slideshow" role="region" aria-label="Photos of BETAWI Indonesian Cuisine" tabindex="0">
+                        <div class="slide-images">
+                            <img class="slide-image is-active" src="images/restaurant6.jpg" alt="BETAWI Indonesian Cuisine" loading="lazy">
+                            <img class="slide-image" src="images/restaurant6.1.jpg" alt="Iga Bakar Nasi Bakul" loading="lazy" hidden>
+                            <img class="slide-image" src="images/restaurant6.2.jpg" alt="Ikan Bobor Ayam" loading="lazy" hidden>
+                        </div>
+                        <button class="slide-arrow slide-prev" type="button" aria-label="Previous photo of BETAWI Indonesian Cuisine">&#10094;</button>
+                        <button class="slide-arrow slide-next" type="button" aria-label="Next photo of BETAWI Indonesian Cuisine">&#10095;</button>
+                        <span class="slide-counter" aria-live="polite">1 / 3</span>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="restaurant-title">BETAWI Indonesian Cuisine</h2>
+                        <span class="badge">Halal-focused / Indonesian Cuisine</span>
+                        <div class="restaurant-meta">
+                            <p><strong>Estimated price per person:</strong><br> RM 20-120</p>
+                            <p><strong>Reservation deposit:</strong> RM 10</p>
+                        </div>
+                        <h3 class="signature-heading">Signature Dishes</h3>
+                        <ul class="signature-dishes">
+                            <li><span>Iga Bakar Nasi Bakul</span><strong>RM 80.00</strong></li>
+                            <li><span>Ikan Bobor Ayam</span><strong>RM 40.00</strong></li>
+                        </ul>
+                        <p class="restaurant-description">
+                            Located in Taman Tun Dr Ismail, Kuala Lumpur,
+                            BETAWI Indonesian Cuisine offers a variety of
+                            traditional Indonesian dishes with rich flavours
+                            and aromatic spices. The restaurant features a
+                            comfortable and welcoming atmosphere, making it
+                            suitable for family gatherings, casual meals, and
+                            dining with friends. Popular dishes include Iga
+                            Bakar, featuring tender grilled beef ribs, and
+                            Ayam Bakar Kalasan, a flavourful grilled chicken
+                            dish. With its selection of Indonesian favourites,
+                            BETAWI is a great place for diners who enjoy
+                            hearty meals and authentic Indonesian flavours.       
+                        </p>
+                    </div>
+                     <a href="reservation.html?restaurant=BETAWI%20Indonesian%20Cuisine&deposit=10" class="book-btn">Book Table</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About EatEat</h3>
+                <p>Helping you discover great restaurants and enjoy a simpler dining experience.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:105025228@student.swin.edu.au">105025228@student.swin.edu.au</a></p>
+                <p>Phone: <a href="tel:+60102631109">+6010 2631109</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EatEat Platform. All rights reserved. Developed for COS10005 Web Development.</p>
+        </div>
+    </footer>
+</body>
+</html>

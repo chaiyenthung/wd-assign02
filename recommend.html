@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EatEat - Recommendations | Find Your Match</title>
+    <meta name="keywords" content="Assignment 2" >
+	<meta name="author" content="Chai Yen Thung" >
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+
+    <!-- Header & Navigation Menu -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-area">
+                <img src="images/logo.png" alt="EatEat Logo">
+                <span>EatEat</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="restaurants.html">Restaurants</a></li>
+                    <li><a href="recommend.html" class="active">Recommendations</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="bill.html">Bill Calculator</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h1>Find Your Ideal Restaurant Match</h1>
+            <p>
+                Not sure where to eat? Tell us your dietary preference,
+                budget, and dining purpose, and EatEat will help you
+                find a restaurant that suits your needs.
+            </p>
+            
+            <!--Recommendation Form-->
+            <form id="recommendation-form">
+
+                <!-- Category -->
+                <div class="form-group">
+                    <label for="category">Category / Cuisine Type:</label>
+                    <select id="category" name="category" required>
+                        <option value="">-- Select Category --</option>
+                        <option value="all">Any / All Categories</option>
+                        <option value="fine-dining">Sky Dining & Grill / Fine Dining</option>
+                        <option value="cafe">Cafe / Desserts</option>
+                        <option value="thai">Thai Cuisine</option>
+                        <option value="european">European Cafe</option>
+                        <option value="vegan">Vegan / Plant-Based</option>
+                        <option value="indonesian">Indonesian Cuisine</option>
+                    </select>
+                </div>
+
+                <!-- Dietary Preference -->
+                <div class="form-group">
+                    <label for="dietary">Dietary Preference:</label>
+                    <select id="dietary" name="dietary" required>
+                        <option value="">-- Select Dietary Preference --</option>
+                        <option value="vegan">Vegan / Plant-Based</option>
+                        <option value="halal">Halal-Friendly</option>
+                        <option value="none">No Preference</option>
+                    </select>
+                </div>
+
+                <!-- Budget Range -->
+                <div class="form-group">
+                    <label for="budget">Budget Range (Per Person):</label>
+                    <select id="budget" name="budget" required>
+                        <option value="">-- Select Budget Range --</option>
+                        <option value="low">Budget (RM20 - RM40)</option>
+                        <option value="medium">Moderate (RM41 - RM70)</option>
+                        <option value="high">Premium (RM71 and Above)</option>
+                    </select>
+                </div>
+
+                <!-- Dining Purpose -->
+                <div class="form-group">
+                    <label for="purpose">Dining Purpose:</label>
+                    <select id="purpose" name="purpose" required>
+                        <option value="">-- Select Dining Purpose --</option>
+                        <option value="family">Family Gathering</option>
+                        <option value="date">Romantic Date</option>
+                        <option value="business">Business / Professional</option>
+                        <option value="casual">Casual Dining / Friends</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="recommend-btn">
+                    Find My Restaurant
+                </button>
+
+            </form>
+
+            <!-- Result -->
+             <div id="result-container" aria-live="polite">
+                <h2 id="res-title">Recommended Restaurant</h2>
+                <p id="res-desc"></p>
+                <p id="res-budget-note"></p>
+                <p id="res-price">
+                    <strong>Estimated Reservation Deposit:</strong>
+                    RM <span id="res-deposit"></span>
+                </p>
+                <a id="res-link" href="#" class="select-match-btn">
+                    Reserve This Restaurant
+                </a>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About EatEat</h3>
+                <p>Helping you discover great restaurants and enjoy a simpler dining experience.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:105025228@student.swin.edu.au">105025228@student.swin.edu.au</a></p>
+                <p>Phone: <a href="tel:+60102631109">+6010 2631109</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EatEat Platform. All rights reserved. Developed for COS10005 Web Development.</p>
+        </div>
+    </footer>
+</body>
+</html>
