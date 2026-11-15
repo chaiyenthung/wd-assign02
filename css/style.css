@@ -691,7 +691,7 @@ input[type="checkbox"] {
 
 /* 10. FOOTER STYLES */
 footer {
-    background-color: var(--brown);
+    background-color: #6b4f45;
     color: var(--white);
     padding: 38px 0 20px;
     margin-top: auto;
