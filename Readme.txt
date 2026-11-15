@@ -26,8 +26,7 @@ The project follows the exact required folder structure:
 ---------------------------------------------------------
 2. GITHUB REPOSITORY LINK
 ---------------------------------------------------------
-https://github.com/your-username/EatEat-Restaurant-Platform
-*(Note: Replace with your actual public or accessible GitHub repository URL prior to final submission)*
+https://chaiyenthung.github.io/wd-assign02/index.html
 
 
 ---------------------------------------------------------
